@@ -1,0 +1,2 @@
+module Account::CompaniesHelper
+end

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Fitness Disciplines</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Enabled</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fitness_disciplines.each do |fitness_discipline| %>
+      <tr>
+        <td><%= fitness_discipline.name %></td>
+        <td><%= fitness_discipline.enabled %></td>
+        <td><%= link_to 'Show', fitness_discipline %></td>
+        <td><%= link_to 'Edit', edit_fitness_discipline_path(fitness_discipline) %></td>
+        <td><%= link_to 'Destroy', fitness_discipline, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fitness Discipline', new_fitness_discipline_path %>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @account_company.name %>
+</p>
+
+<p>
+  <strong>Phone number:</strong>
+  <%= @account_company.phone_number %>
+</p>
+
+<p>
+  <strong>Enabled:</strong>
+  <%= @account_company.enabled %>
+</p>
+
+<%= link_to 'Edit', edit_account_company_path(@account_company) %> |
+<%= link_to 'Back', account_companies_path %>

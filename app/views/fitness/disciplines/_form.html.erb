@@ -1,0 +1,27 @@
+<%= form_with(model: fitness_discipline, local: true) do |form| %>
+  <% if fitness_discipline.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(fitness_discipline.errors.count, "error") %> prohibited this fitness_discipline from being saved:</h2>
+
+      <ul>
+        <% fitness_discipline.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :enabled %>
+    <%= form.check_box :enabled %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

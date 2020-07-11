@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @fitness_discipline.name %>
+</p>
+
+<p>
+  <strong>Enabled:</strong>
+  <%= @fitness_discipline.enabled %>
+</p>
+
+<%= link_to 'Edit', edit_fitness_discipline_path(@fitness_discipline) %> |
+<%= link_to 'Back', fitness_disciplines_path %>

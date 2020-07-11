@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Account Companies</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Phone number</th>
+      <th>Enabled</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @account_companies.each do |account_company| %>
+      <tr>
+        <td><%= account_company.name %></td>
+        <td><%= account_company.phone_number %></td>
+        <td><%= account_company.enabled %></td>
+        <td><%= link_to 'Show', account_company %></td>
+        <td><%= link_to 'Edit', edit_account_company_path(account_company) %></td>
+        <td><%= link_to 'Destroy', account_company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Account Company', new_account_company_path %>
